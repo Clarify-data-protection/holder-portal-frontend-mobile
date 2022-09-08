@@ -1,9 +1,9 @@
 <template>
-  <v-card>
+  <v-card ripple elevation="1">
     <v-card-text class="d-flex flex-column align-center">
-      <h2 class="mb-2">{{ company.name }}</h2>
+      <h2 class="mb-2 mt-n2">{{ company.name }}</h2>
 
-      <v-img src="@/assets/images/misc/logoDisney.png" />
+      <v-img :src="company.logo" />
     </v-card-text>
   </v-card>
 </template>

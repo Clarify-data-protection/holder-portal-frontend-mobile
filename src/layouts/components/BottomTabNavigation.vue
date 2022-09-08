@@ -1,6 +1,7 @@
 <template>
   <v-bottom-navigation
-    v-model="value"
+    :value="currentPage"
+    @change="handleChangePage"
     grow
     fixed
     background-color="primary"
@@ -9,22 +10,36 @@
     max-height="45"
   >
     <v-btn elevation="0">
-      <v-icon>mdi-television-play</v-icon>
+      <v-icon>mdi-compass-outline</v-icon>
     </v-btn>
 
     <v-btn elevation="0">
-      <v-icon>mdi-home</v-icon>
+      <v-icon>mdi-home-outline</v-icon>
     </v-btn>
 
     <v-btn elevation="0">
-      <v-icon>mdi-book</v-icon>
+      <v-icon>mdi-incognito</v-icon>
     </v-btn>
   </v-bottom-navigation>
 </template>
 
 <script>
 export default {
-  data: () => ({ value: 0 })
+  data: () => ({ currentPage: 1 }),
+
+  methods: {
+    handleChangePage(val) {
+      const pages = {
+        0: 'home',
+        1: 'home',
+        2: 'leaks'
+      }
+
+      this.$router.push(pages[val] || pages[0])
+
+      return
+    }
+  }
 }
 </script>
 
