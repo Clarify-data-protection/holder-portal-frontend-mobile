@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <v-app-bar extended fixed app color="primary">
+    <v-app-bar fixed app color="primary" class="py-1">
       <v-col>
         <v-row>
           <v-spacer></v-spacer>
-          <div class="d-flex align-center mx-6">
+          <div class="d-flex align-center">
             <v-spacer></v-spacer>
 
             <theme-switcher></theme-switcher>
@@ -43,9 +43,9 @@
     </v-app-bar>
 
     <v-main>
-      <div class="app-content-container boxed-container pa-6">
+      <v-container class="pt-10 pb-13">
         <slot></slot>
-      </div>
+      </v-container>
     </v-main>
     <bottom-tab-navigation v-if="isBottomVisible" />
   </v-app>
@@ -78,16 +78,15 @@ export default {
 
 <style lang="scss" scoped>
 .v-app-bar ::v-deep {
+  height: auto !important;
+
   .v-toolbar__content {
-    padding: 10px 0px;
     height: auto !important;
   }
 }
 
 .navbar {
   width: 100%;
-  padding-bottom: 5px;
-  background: var(--v-primary-base);
   color: white;
   font-size: 20px;
   font-weight: bold;

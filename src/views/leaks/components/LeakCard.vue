@@ -1,5 +1,5 @@
 <template>
-  <v-card ripple color="error">
+  <v-card @click="$emit('click')" ripple color="error">
     <v-card-text class="white--text">
       <v-col>
         <v-row align="center">

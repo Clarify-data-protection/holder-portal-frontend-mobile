@@ -8,21 +8,30 @@
       hide-details="auto"
     />
 
-    <leak-card v-for="(leak, index) in leaks" :key="index"></leak-card>
+    <leak-card
+      v-for="(leak, index) in leaks"
+      :key="index"
+      @click="showLeakInfo = true"
+    />
+
+    <leak-info-dialog :show.sync="showLeakInfo" />
   </div>
 </template>
 
 <script>
 import LeakCard from './components/LeakCard.vue'
+import LeakInfoDialog from './components/LeakInfoDialog.vue'
 
 export default {
   components: {
-    LeakCard
+    LeakCard,
+    LeakInfoDialog
   },
 
   data() {
     return {
-      leaks: Array.from({ length: 50 }, (_, i) => i)
+      leaks: Array.from({ length: 50 }, (_, i) => i),
+      showLeakInfo: false
     }
   }
 }
