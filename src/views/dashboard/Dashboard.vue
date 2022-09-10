@@ -17,7 +17,7 @@
         class="pa-1"
         cols="4"
       >
-        <company-card :company="company" />
+        <company-card @click="handleRedirect" :company="company" />
       </v-col>
     </v-row>
   </v-col>
@@ -33,13 +33,19 @@ export default {
     CompanyCard
   },
 
+  methods: {
+    handleRedirect(company) {
+      this.$router.push({ name: 'companyForm', params: { company } })
+    }
+  },
+
   data() {
     return {
       companies: [
-        { name: 'Disney', logo },
-        { name: 'Disney', logo },
-        { name: 'Disney', logo },
-        { name: 'Disney', logo }
+        { name: 'Disney', logo, id: 1 },
+        { name: 'Disney', logo, id: 2 },
+        { name: 'Disney', logo, id: 3 },
+        { name: 'Disney', logo, id: 4 }
       ]
     }
   }

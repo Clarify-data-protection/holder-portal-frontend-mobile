@@ -1,5 +1,5 @@
 <template>
-  <v-card ripple elevation="1">
+  <v-card @click="handleClick" ripple elevation="1">
     <v-card-text class="d-flex flex-column align-center">
       <h2 class="mb-2 mt-n2">{{ company.name }}</h2>
 
@@ -9,6 +9,12 @@
 </template>
 <script>
 export default {
+  methods: {
+    handleClick() {
+      this.$emit('click', this.company)
+    }
+  },
+
   props: {
     company: {
       type: Object,
