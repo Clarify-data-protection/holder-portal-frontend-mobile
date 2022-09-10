@@ -7,9 +7,11 @@
 
           <theme-switcher></theme-switcher>
           <v-btn icon small class="ms-3">
-            <v-icon color="white">
-              mdi-bell-outline
-            </v-icon>
+            <v-badge :content="2" color="error" overlap>
+              <v-icon color="white">
+                mdi-bell-outline
+              </v-icon>
+            </v-badge>
           </v-btn>
           <app-bar-user-menu></app-bar-user-menu>
         </div>
@@ -22,7 +24,7 @@
         <slot></slot>
       </div>
     </v-main>
-    <bottom-tab-navigation />
+    <bottom-tab-navigation v-if="isBottomVisible" />
   </v-app>
 </template>
 
@@ -38,6 +40,11 @@ export default {
     AppBarUserMenu,
     BottomTabNavigation,
     NavBar
+  },
+  computed: {
+    isBottomVisible: function() {
+      return !this.$route.meta.hideTabsNavigator
+    }
   }
 }
 </script>

@@ -1,6 +1,22 @@
 <template>
   <div class="navbar">
-    {{ currentPage }}
+    <v-btn
+      v-if="goBack"
+      elevation="0"
+      x-small
+      absolute
+      left
+      @click="$router.go(-1)"
+      color="transparent"
+      class="white--text"
+    >
+      <v-icon size="30">
+        mdi-chevron-left
+      </v-icon>
+    </v-btn>
+    <span>
+      {{ currentPage }}
+    </span>
   </div>
 </template>
 
@@ -8,7 +24,10 @@
 export default {
   computed: {
     currentPage: function() {
-      return this.$route.name
+      return this.$route.meta.title || ''
+    },
+    goBack: function() {
+      return this.$route.meta.goBack
     }
   }
 }
@@ -23,5 +42,8 @@ export default {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

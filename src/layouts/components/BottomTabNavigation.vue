@@ -49,4 +49,8 @@ export default {
   background-color: var(--v-primary-color) !important;
   color: white !important;
 }
+
+.theme--light.v-bottom-navigation .v-btn:not(.v-btn--active) {
+  color: #a7a7a7 !important;
+}
 </style>

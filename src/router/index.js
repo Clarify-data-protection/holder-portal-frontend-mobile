@@ -10,13 +10,29 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'Home',
-    component: () => import('@/views/dashboard/Dashboard.vue')
+    name: 'home',
+    component: () => import('@/views/dashboard/Dashboard.vue'),
+    meta: {
+      title: 'Home'
+    }
   },
   {
     path: '/leaks',
-    name: 'Vazamentos',
-    component: () => import('@/views/leaks/Leaks.vue')
+    name: 'leaks',
+    component: () => import('@/views/leaks/Leaks.vue'),
+    meta: {
+      title: 'Vazamentos Recentes'
+    }
+  },
+  {
+    path: '/companyForm',
+    name: 'companyForm',
+    component: () => import('@/views/companyForm/CompanyForm.vue'),
+    meta: {
+      title: 'Exerça seu direito',
+      goBack: true,
+      hideTabsNavigator: true
+    }
   }
 ]
 
