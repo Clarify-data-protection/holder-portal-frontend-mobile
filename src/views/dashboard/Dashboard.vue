@@ -15,7 +15,7 @@
         v-for="(company, index) in companies"
         :key="index"
         class="pa-1"
-        cols="4"
+        cols="6"
       >
         <company-card @click="handleRedirect" :company="company" />
       </v-col>
@@ -26,7 +26,8 @@
 <script>
 import CompanyCard from './CompanyCard.vue'
 
-import logo from '@/assets/images/misc/logoDisney.png'
+import logo from '@/assets/images/logos/disney.png'
+import logoFacebook from '@/assets/images/logos/facebook.png'
 
 export default {
   components: {
@@ -43,9 +44,7 @@ export default {
     return {
       companies: [
         { name: 'Disney', logo, id: 1 },
-        { name: 'Disney', logo, id: 2 },
-        { name: 'Disney', logo, id: 3 },
-        { name: 'Disney', logo, id: 4 }
+        { name: 'Facebook', logo: logoFacebook, id: 2 }
       ]
     }
   }

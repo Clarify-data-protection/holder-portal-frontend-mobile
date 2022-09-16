@@ -7,7 +7,7 @@
       <v-img
         class="mt-1"
         contain
-        src="@/assets/images/misc/logoDisney.png"
+        src="@/assets/images/logos/disney.png"
         max-width="100"
       />
     </v-card-title>

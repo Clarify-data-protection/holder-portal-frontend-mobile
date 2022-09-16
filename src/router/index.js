@@ -21,7 +21,7 @@ const routes = [
     name: 'leaks',
     component: () => import('@/views/leaks/Leaks.vue'),
     meta: {
-      title: 'Vazamentos Recentes'
+      title: 'Vazamentos'
     }
   },
   {

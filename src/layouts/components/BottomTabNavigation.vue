@@ -6,18 +6,21 @@
     fixed
     background-color="primary"
     mandatory
-    min-height="45"
-    max-height="45"
+    min-height="60"
+    max-height="60"
   >
     <v-btn elevation="0">
+      <span>Descubra</span>
       <v-icon>mdi-compass-outline</v-icon>
     </v-btn>
 
     <v-btn elevation="0">
+      <span>Home</span>
       <v-icon>mdi-home-outline</v-icon>
     </v-btn>
 
     <v-btn elevation="0">
+      <span>Vazamentos</span>
       <v-icon>mdi-incognito</v-icon>
     </v-btn>
   </v-bottom-navigation>
