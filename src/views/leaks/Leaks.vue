@@ -6,6 +6,7 @@
       placeholder="Pesquise..."
       label="Pesquise..."
       hide-details="auto"
+      v-model="search"
     />
 
     <leak-card
@@ -22,6 +23,13 @@
 import LeakCard from './components/LeakCard.vue'
 import LeakInfoDialog from './components/LeakInfoDialog.vue'
 
+class Leak {
+  constructor(name, date) {
+    this.name = name
+    this.date = date
+  }
+}
+
 export default {
   components: {
     LeakCard,
@@ -30,8 +38,20 @@ export default {
 
   data() {
     return {
-      leaks: Array.from({ length: 50 }, (_, i) => i),
-      showLeakInfo: false
+      leaks: Array.from({ length: 7 }, (_, i) => i),
+      // leaks: [
+      //   new Leak('Facebook', '01/08/2019'),
+      //   new Leak('Disney', '01/08/2019')
+      // ],
+      showLeakInfo: false,
+      search: ''
+    }
+  },
+  computed: {
+    filteredList() {
+      return this.leaks.filter(leak => {
+        return leak.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
   }
 }
