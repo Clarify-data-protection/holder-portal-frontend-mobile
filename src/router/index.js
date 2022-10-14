@@ -33,6 +33,36 @@ const routes = [
       goBack: true,
       hideTabsNavigator: true
     }
+  },
+  {
+    path: '/faq',
+    name: 'faq',
+    component: () => import('@/views/faq/Faq.vue'),
+    meta: {
+      title: 'FAQ',
+      goBack: true,
+      hideTabsNavigator: true
+    }
+  },
+  {
+    path: '/about-us',
+    name: 'about-us',
+    component: () => import('@/views/about/About.vue'),
+    meta: {
+      title: 'Sobre nós',
+      goBack: true,
+      hideTabsNavigator: true
+    }
+  },
+  {
+    path: '/lgpd',
+    name: 'lgpd',
+    component: () => import('@/views/lgpd/Lgpd.vue'),
+    meta: {
+      title: 'LGPD',
+      goBack: true,
+      hideTabsNavigator: true
+    }
   }
 ]
 
