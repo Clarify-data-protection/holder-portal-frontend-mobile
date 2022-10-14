@@ -3,23 +3,26 @@
     <img
       class="misc-mask"
       height="226"
-      :src="require(`@/assets/images/misc/misc-mask-${$vuetify.theme.dark ? 'dark' : 'light'}.png`)"
+      :src="
+        require(`@/assets/images/misc/misc-mask-${
+          $vuetify.theme.dark ? 'dark' : 'light'
+        }.png`)
+      "
     />
 
-    <v-img
-      class="misc-tree"
-      src="@/assets/images/misc/tree-4.png"
-    ></v-img>
+    <v-img class="misc-tree" src="@/assets/images/misc/tree-4.png"></v-img>
 
     <div class="page-title text-center px-5">
-      <h2 class="text-2xl font-weight-semibold text--primary d-flex align-center justify-center">
-        <span class="me-2">Page Not Found</span>
+      <h2
+        class="text-2xl font-weight-semibold text--primary d-flex align-center justify-center"
+      >
+        <span class="me-2">Página não encontrada</span>
         <v-icon color="warning">
           {{ icons.mdiAlert }}
         </v-icon>
       </h2>
       <p class="text-sm">
-        we couldn't find the page you are looking for
+        não encontramos a página que você está procurando
       </p>
 
       <div class="misc-character d-flex justify-center">
@@ -29,12 +32,8 @@
         ></v-img>
       </div>
 
-      <v-btn
-        color="primary"
-        to="/"
-        class="mb-4"
-      >
-        Back to home
+      <v-btn color="primary" to="/" class="mb-4">
+        Voltar
       </v-btn>
     </div>
   </div>
@@ -47,10 +46,10 @@ export default {
   setup() {
     return {
       icons: {
-        mdiAlert,
-      },
+        mdiAlert
+      }
     }
-  },
+  }
 }
 </script>
 

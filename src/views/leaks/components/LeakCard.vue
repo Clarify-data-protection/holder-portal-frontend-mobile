@@ -7,7 +7,7 @@
             Facebook
           </span>
           <v-spacer></v-spacer>
-          <span>12/12/1212</span>
+          <span>01/08/2019</span>
         </v-row>
       </v-col>
     </v-card-text>

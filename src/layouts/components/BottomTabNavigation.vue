@@ -10,13 +10,13 @@
     max-height="60"
   >
     <v-btn elevation="0">
-      <span>Descubra</span>
-      <v-icon>mdi-compass-outline</v-icon>
+      <span>Home</span>
+      <v-icon>mdi-home-outline</v-icon>
     </v-btn>
 
     <v-btn elevation="0">
-      <span>Home</span>
-      <v-icon>mdi-home-outline</v-icon>
+      <span>Descubra</span>
+      <v-icon>mdi-compass-outline</v-icon>
     </v-btn>
 
     <v-btn elevation="0">
@@ -55,5 +55,13 @@ export default {
 
 .theme--light.v-bottom-navigation .v-btn:not(.v-btn--active) {
   color: #a7a7a7 !important;
+}
+
+.v-btn > .v-btn__content .v-icon {
+  color: #fff !important;
+}
+
+.v-btn__content span {
+  color: #fff !important;
 }
 </style>
