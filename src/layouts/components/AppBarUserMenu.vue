@@ -48,6 +48,17 @@
 
       <v-divider></v-divider>
 
+      <v-list-item link to="/about-us">
+        <v-list-item-icon class="me-2">
+          <v-icon size="22">
+            mdi-information-outline
+          </v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>Sobre App</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
       <v-list-item link>
         <v-list-item-icon class="me-2">
           <v-icon size="22">
@@ -76,6 +87,50 @@
 
       <v-divider class="my-2"></v-divider>
 
+      <v-list-item link to="/LGPD">
+        <v-list-item-icon class="me-2">
+          <v-icon size="22">
+            mdi-security
+          </v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>LGPD</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-list-item link to="/faq">
+        <v-list-item-icon class="me-2">
+          <v-icon size="22">
+            mdi-help-circle-outline
+          </v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>FAQ</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-list-item link>
+        <v-list-item-icon class="me-2">
+          <v-icon size="22">
+            mdi-email-outline
+          </v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>Contato</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-list-item link>
+        <v-list-item-icon class="me-2">
+          <v-icon size="22">
+            mdi-file-lock
+          </v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>Politica de Privacidade</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
       <v-list-item link>
         <v-list-item-icon class="me-2">
           <v-icon size="22">
@@ -84,17 +139,6 @@
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title>Configuração</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-list-item link>
-        <v-list-item-icon class="me-2">
-          <v-icon size="22">
-            mdi-help-circle-outline
-          </v-icon>
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-title>FAQ</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
