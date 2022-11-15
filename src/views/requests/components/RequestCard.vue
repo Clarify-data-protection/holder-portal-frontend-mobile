@@ -37,22 +37,17 @@ export default {
 
   computed: {
     color() {
-      // static FOUND = 4
-      // static EMPTY = 5
-      // static ANONYMIZED = 6
       switch (this.request.status) {
         case 4:
           return 'info'
         case 5:
+          return 'secondary'
         case 6:
           return 'success'
 
         default:
           return 'secondary'
       }
-
-      console.log(this.request)
-      return 'info'
     }
   }
 }
