@@ -53,17 +53,17 @@ const routes = [
       goBack: true,
       hideTabsNavigator: true
     }
-  },
-  {
-    path: '/lgpd',
-    name: 'lgpd',
-    component: () => import('@/views/lgpd/Lgpd.vue'),
-    meta: {
-      title: 'LGPD',
-      goBack: true,
-      hideTabsNavigator: true
-    }
   }
+  // {
+  //   path: '/lgpd',
+  //   name: 'lgpd',
+  //   component: () => import('@/views/lgpd/Lgpd.vue'),
+  //   meta: {
+  //     title: 'LGPD',
+  //     goBack: true,
+  //     hideTabsNavigator: true
+  //   }
+  // }
 ]
 
 const router = new VueRouter({
