@@ -1,9 +1,9 @@
 <template>
   <v-card @click="handleClick" ripple elevation="1">
     <v-card-text class="d-flex flex-column align-center">
-      <h2 class="mb-2 mt-n2">{{ company.name }}</h2>
-
-      <v-img :src="company.logo" />
+      <strong>{{ company.name }}</strong>
+      <v-img :src="company.logo" max-width="50px" />
+      <small>{{ company.url }}</small>
     </v-card-text>
   </v-card>
 </template>
@@ -24,4 +24,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h2 {
+  font-size: 2.5vh;
+}
+</style>

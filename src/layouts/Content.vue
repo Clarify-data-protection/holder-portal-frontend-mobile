@@ -43,7 +43,7 @@
     </v-app-bar>
 
     <v-main>
-      <v-container class="pt-10 pb-13">
+      <v-container style="height: 100%" class="pt-10 pb-13">
         <slot></slot>
       </v-container>
     </v-main>

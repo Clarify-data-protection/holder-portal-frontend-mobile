@@ -4,7 +4,7 @@
       <v-col>
         <v-row align="center">
           <span class="font-weight-bold">
-            Facebook
+            {{ leak.name }}
           </span>
           <v-spacer></v-spacer>
           <span>01/08/2019</span>
@@ -13,3 +13,13 @@
     </v-card-text>
   </v-card>
 </template>
+
+<script>
+export default {
+  props: {
+    leak: {
+      type: Object
+    }
+  }
+}
+</script>

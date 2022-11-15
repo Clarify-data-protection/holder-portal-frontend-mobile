@@ -6,16 +6,37 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: 'home'
+    redirect: 'requests'
   },
   {
-    path: '/home',
-    name: 'home',
-    component: () => import('@/views/dashboard/Dashboard.vue'),
+    path: '/requests',
+    name: 'requests',
+    component: () => import('@/views/requests/Requests.vue'),
     meta: {
-      title: 'Home'
+      title: 'Solicitações'
     }
   },
+
+  {
+    path: '/requests/info',
+    name: 'requestInfo',
+    component: () => import('@/views/requestInfo/RequestInfo.vue'),
+    meta: {
+      title: 'Informações',
+      goBack: true,
+      hideTabsNavigator: true
+    }
+  },
+
+  {
+    path: '/registrations',
+    name: 'registrations',
+    component: () => import('@/views/registrations/Registrations.vue'),
+    meta: {
+      title: 'Exerça seu direto'
+    }
+  },
+
   {
     path: '/leaks',
     name: 'leaks',

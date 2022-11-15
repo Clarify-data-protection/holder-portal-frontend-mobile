@@ -6,8 +6,8 @@
     fixed
     background-color="primary"
     mandatory
-    min-height="60"
-    max-height="60"
+    min-height="50"
+    max-height="50"
   >
     <v-btn elevation="0">
       <span>Home</span>
@@ -15,8 +15,8 @@
     </v-btn>
 
     <v-btn elevation="0">
-      <span>Descubra</span>
-      <v-icon>mdi-compass-outline</v-icon>
+      <span>Solitações</span>
+      <v-icon>mdi-account</v-icon>
     </v-btn>
 
     <v-btn elevation="0">
@@ -28,17 +28,33 @@
 
 <script>
 export default {
-  data: () => ({ currentPage: 1 }),
+  data: () => ({
+    currentPage: 1,
+
+    pages: {
+      0: 'registrations',
+      1: 'requests',
+      2: 'leaks'
+    }
+  }),
+
+  watch: {
+    $route: {
+      handler: function(route) {
+        const found = Object.entries(this.pages).find(
+          ([_, name]) => name === route.name
+        )
+
+        if (found) this.currentPage = +found[0]
+      },
+      deep: true,
+      immediate: true
+    }
+  },
 
   methods: {
     handleChangePage(val) {
-      const pages = {
-        0: 'home',
-        1: 'home',
-        2: 'leaks'
-      }
-
-      this.$router.push(pages[val] || pages[0])
+      this.$router.push(this.pages[val] || this.pages[0])
 
       return
     }

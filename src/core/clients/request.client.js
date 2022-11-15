@@ -5,8 +5,20 @@ class RequestClient {
     this.httpClient = httpClient
   }
 
-  async findAll() {
-    return await this.httpClient.get()
+  async findAll(filters) {
+    const res = await this.httpClient.get('', filters)
+
+    return res.data
+  }
+
+  async findOne(id) {
+    const res = await this.httpClient.get(`/${id}`)
+
+    return res.data
+  }
+
+  async createOne(payload) {
+    return await this.httpClient.post('', payload)
   }
 }
 
